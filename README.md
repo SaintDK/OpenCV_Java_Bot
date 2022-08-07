@@ -9,4 +9,6 @@ How to start?
 4. place mining guns on F1 and F2
 5. while in the dock, run MinerTest2.java
 
+6. click to star on https://github.com/SaintDK/OpenCV_Java_Bot
+
 I recommend making changes only in the existing cycle
