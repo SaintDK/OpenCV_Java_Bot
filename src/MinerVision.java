@@ -28,7 +28,7 @@ public class MinerVision extends MouseMotionTestBase {
     public static void main(String[] args) throws AWTException, IOException{
         Rectangle rect = null;
 
-        int hWnd = User32.instance.FindWindowA(null, "EVE - DK-0");
+        int hWnd = User32.instance.FindWindowA(null, "enter window name");
 
         JFrame window = new JFrame("Window:");
         JLabel screen = new JLabel();
@@ -145,7 +145,7 @@ public class MinerVision extends MouseMotionTestBase {
                 Imgproc.rectangle(MatImg, FULLMatchLoc, new Point(FULLMatchLoc.x + FULL.cols(), FULLMatchLoc.y + FULL.rows()), new Scalar(0, 0, 255));
                 try {
                     for (DesktopWindow desktopWindow : WindowUtils.getAllWindows(true)) {
-                        if (desktopWindow.getTitle().contains("name of your window")) {
+                        if (desktopWindow.getTitle().contains("enter window name")) {
                             rect = desktopWindow.getLocAndSize();
                         }
                     }
@@ -168,7 +168,7 @@ public class MinerVision extends MouseMotionTestBase {
                 Imgproc.rectangle(MatImg, UNDOCKmatchLoc, new Point(UNDOCKmatchLoc.x + UNDOCK.cols(), UNDOCKmatchLoc.y + UNDOCK.rows()), new Scalar(0, 0, 0));
                 try {
                     for (DesktopWindow desktopWindow : WindowUtils.getAllWindows(true)) {
-                        if (desktopWindow.getTitle().contains("name of your window")) {
+                        if (desktopWindow.getTitle().contains("enter window name")) {
                             rect = desktopWindow.getLocAndSize();
                         }
                     }
@@ -190,7 +190,7 @@ public class MinerVision extends MouseMotionTestBase {
                 Imgproc.rectangle(MatImg, OVERVIEW_MININGMatchLoc, new Point(OVERVIEW_MININGMatchLoc.x + OVERVIEW_MINING.cols(), OVERVIEW_MININGMatchLoc.y + OVERVIEW_MINING.rows()), new Scalar(170, 0, 255));
                 try {
                     for (DesktopWindow desktopWindow : WindowUtils.getAllWindows(true)) {
-                        if (desktopWindow.getTitle().contains("name of your window")) {
+                        if (desktopWindow.getTitle().contains("enter window name")) {
                             rect = desktopWindow.getLocAndSize();
                         }
                     }
@@ -212,7 +212,7 @@ public class MinerVision extends MouseMotionTestBase {
                 Imgproc.rectangle(MatImg, ASTEROID_FILDMatchLoc, new Point(ASTEROID_FILDMatchLoc.x + ASTEROID_FILD.cols(), ASTEROID_FILDMatchLoc.y + ASTEROID_FILD.rows()), new Scalar(255, 255, 255));
                 try {
                     for (DesktopWindow desktopWindow : WindowUtils.getAllWindows(true)) {
-                        if (desktopWindow.getTitle().contains("name of your window")) {
+                        if (desktopWindow.getTitle().contains("enter window name")) {
                             rect = desktopWindow.getLocAndSize();
                         }
                     }
@@ -234,7 +234,7 @@ public class MinerVision extends MouseMotionTestBase {
                 Imgproc.rectangle(MatImg, ASTEROID_VELDSPARMatchLoc, new Point(ASTEROID_VELDSPARMatchLoc.x + ASTEROID_VELDSPAR.cols(), ASTEROID_VELDSPARMatchLoc.y + ASTEROID_VELDSPAR.rows()), new Scalar(0, 0, 255));
                 try {
                     for (DesktopWindow desktopWindow : WindowUtils.getAllWindows(true)) {
-                        if (desktopWindow.getTitle().contains("name of your window")) {
+                        if (desktopWindow.getTitle().contains("enter window name")) {
                             rect = desktopWindow.getLocAndSize();
                         }
                     }
@@ -256,7 +256,7 @@ public class MinerVision extends MouseMotionTestBase {
                 Imgproc.rectangle(MatImg, DOCKMatchLoc, new Point(DOCKMatchLoc.x + DOCK.cols(), DOCKMatchLoc.y + DOCK.rows()), new Scalar(0, 255, 0));
                 try {
                     for (DesktopWindow desktopWindow : WindowUtils.getAllWindows(true)) {
-                        if (desktopWindow.getTitle().contains("name of your window")) {
+                        if (desktopWindow.getTitle().contains("enter window name")) {
                             rect = desktopWindow.getLocAndSize();
                         }
                     }
@@ -278,7 +278,7 @@ public class MinerVision extends MouseMotionTestBase {
                 Imgproc.rectangle(MatImg, GET_CLOSERMatchLoc, new Point(GET_CLOSERMatchLoc.x + GET_CLOSER.cols(), GET_CLOSERMatchLoc.y + GET_CLOSER.rows()), new Scalar(0, 255, 255));
                 try {
                     for (DesktopWindow desktopWindow : WindowUtils.getAllWindows(true)) {
-                        if (desktopWindow.getTitle().contains("name of your window")) {
+                        if (desktopWindow.getTitle().contains("enter window name")) {
                             rect = desktopWindow.getLocAndSize();
                         }
                     }
@@ -300,7 +300,7 @@ public class MinerVision extends MouseMotionTestBase {
                 Imgproc.rectangle(MatImg, ITEM_HANGARMatchLoc, new Point(ITEM_HANGARMatchLoc.x + ITEM_HANGAR.cols(), ITEM_HANGARMatchLoc.y + ITEM_HANGAR.rows()), new Scalar(0, 255, 150));
                 try {
                     for (DesktopWindow desktopWindow : WindowUtils.getAllWindows(true)) {
-                        if (desktopWindow.getTitle().contains("name of your window")) {
+                        if (desktopWindow.getTitle().contains("enter window name")) {
                             rect = desktopWindow.getLocAndSize();
                         }
                     }
@@ -322,7 +322,7 @@ public class MinerVision extends MouseMotionTestBase {
                 Imgproc.rectangle(MatImg, MINING_HOLDMatchLoc, new Point(MINING_HOLDMatchLoc.x + MINING_HOLD.cols(), MINING_HOLDMatchLoc.y + MINING_HOLD.rows()), new Scalar(255, 111, 0));
                 try {
                     for (DesktopWindow desktopWindow : WindowUtils.getAllWindows(true)) {
-                        if (desktopWindow.getTitle().contains("name of your window")) {
+                        if (desktopWindow.getTitle().contains("enter window name")) {
                             rect = desktopWindow.getLocAndSize();
                         }
                     }
@@ -344,7 +344,7 @@ public class MinerVision extends MouseMotionTestBase {
                 Imgproc.rectangle(MatImg, NO_OBJECT_SELECTEDMatchLoc, new Point(NO_OBJECT_SELECTEDMatchLoc.x + NO_OBJECT_SELECTED.cols(), NO_OBJECT_SELECTEDMatchLoc.y + NO_OBJECT_SELECTED.rows()), new Scalar(200, 30, 0));
                 try {
                     for (DesktopWindow desktopWindow : WindowUtils.getAllWindows(true)) {
-                        if (desktopWindow.getTitle().contains("name of your window")) {
+                        if (desktopWindow.getTitle().contains("enter window name")) {
                             rect = desktopWindow.getLocAndSize();
                         }
                     }
@@ -366,7 +366,7 @@ public class MinerVision extends MouseMotionTestBase {
                 Imgproc.rectangle(MatImg, OVERVIEW_GENERALMatchLoc, new Point(OVERVIEW_GENERALMatchLoc.x + OVERVIEW_GENERAL.cols(), OVERVIEW_GENERALMatchLoc.y + OVERVIEW_GENERAL.rows()), new Scalar(255, 0, 255));
                 try {
                     for (DesktopWindow desktopWindow : WindowUtils.getAllWindows(true)) {
-                        if (desktopWindow.getTitle().contains("name of your window")) {
+                        if (desktopWindow.getTitle().contains("enter window name")) {
                             rect = desktopWindow.getLocAndSize();
                         }
                     }
@@ -388,7 +388,7 @@ public class MinerVision extends MouseMotionTestBase {
                 Imgproc.rectangle(MatImg, STATIONMatchLoc, new Point(STATIONMatchLoc.x + STATION.cols(), STATIONMatchLoc.y + STATION.rows()), new Scalar(118, 118, 118));
                 try {
                     for (DesktopWindow desktopWindow : WindowUtils.getAllWindows(true)) {
-                        if (desktopWindow.getTitle().contains("name of your window")) {
+                        if (desktopWindow.getTitle().contains("enter window name")) {
                             rect = desktopWindow.getLocAndSize();
                         }
                     }
@@ -410,7 +410,7 @@ public class MinerVision extends MouseMotionTestBase {
                 Imgproc.rectangle(MatImg, TARGET_LOCKMatchLoc, new Point(TARGET_LOCKMatchLoc.x + TARGET_LOCK.cols(), TARGET_LOCKMatchLoc.y + TARGET_LOCK.rows()), new Scalar(0, 160, 255));
                 try {
                     for (DesktopWindow desktopWindow : WindowUtils.getAllWindows(true)) {
-                        if (desktopWindow.getTitle().contains("name of your window")) {
+                        if (desktopWindow.getTitle().contains("enter window name")) {
                             rect = desktopWindow.getLocAndSize();
                         }
                     }
@@ -432,7 +432,7 @@ public class MinerVision extends MouseMotionTestBase {
                 Imgproc.rectangle(MatImg, WARPMatchLoc, new Point(WARPMatchLoc.x + WARP.cols(), WARPMatchLoc.y + WARP.rows()), new Scalar(40, 200, 0));
                 try {
                     for (DesktopWindow desktopWindow : WindowUtils.getAllWindows(true)) {
-                        if (desktopWindow.getTitle().contains("name of your window")) {
+                        if (desktopWindow.getTitle().contains("enter window name")) {
                             rect = desktopWindow.getLocAndSize();
                         }
                     }
