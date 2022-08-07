@@ -35,6 +35,7 @@ public class MinerTest2 extends MouseMotionTestBase {
 
         int count = 0;
         int laser = 0;
+        int Mining = 0;
 
         int hWnd = User32.instance.FindWindowA(null, "EVE - DK-0");
 
@@ -199,19 +200,42 @@ public class MinerTest2 extends MouseMotionTestBase {
                     Thread.sleep(1000);
                     robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
                     robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
-                    Thread.sleep(10000);
+                    Thread.sleep(15000);
 
-                    factory.move(X-30,Y+15);
-                    robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
-                    robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
-                    System.out.println(ASTEROID_FILDmmr.maxVal);
-                    Thread.sleep(3000);
+                    Mining = 0;
+                    laser = 0;
 
                 } catch (Exception ex) {
                     ex.printStackTrace();
                 }
             }
-            System.out.println(ASTEROID_FILDmmr.maxVal + "Belt");
+            System.out.println(OVERVIEW_MININGmmr.maxVal +" OVERVIEW_MINING");
+            if (OVERVIEW_MININGmmr.maxVal > 0.800855073928833 && Mining == 0) { // значение mmr.maxVal показывает уровень сходства
+                Imgproc.rectangle(MatImg, OVERVIEW_MININGMatchLoc, new Point(OVERVIEW_MININGMatchLoc.x + OVERVIEW_MINING.cols(), OVERVIEW_MININGMatchLoc.y + OVERVIEW_MINING.rows()), new Scalar(170, 0, 255));
+                try {
+                    for (DesktopWindow desktopWindow : WindowUtils.getAllWindows(true)) {
+                        if (desktopWindow.getTitle().contains("name of your window")) {
+                            rect = desktopWindow.getLocAndSize();
+                        }
+                    }
+                    Robot robot = new Robot();
+                    int X = (int) (rect.x + OVERVIEW_MININGMatchLoc.x + 7);
+                    int Y = (int) (rect.y + OVERVIEW_MININGMatchLoc.y + 7);
+                    MouseMotionFactory factory = new MouseMotionFactory();
+                    factory.move(X,Y);
+                    Thread.sleep(1000);
+                    robot.mousePress(InputEvent.BUTTON1_DOWN_MASK);
+                    robot.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
+                    Thread.sleep(1000);
+
+                    Mining++;
+
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+
+            System.out.println(ASTEROID_FILDmmr.maxVal + " ASTEROID_FILD");
             if (ASTEROID_FILDmmr.maxVal > 0.900855073928833 && (FULLmmr.maxVal < 0.900855073928833 || FULL2mmr.maxVal < 0.940855073928833)) { // значение mmr.maxVal показывает уровень сходства
                 Imgproc.rectangle(MatImg, ASTEROID_FILDMatchLoc, new Point(ASTEROID_FILDMatchLoc.x + ASTEROID_FILD.cols(), ASTEROID_FILDMatchLoc.y + ASTEROID_FILD.rows()), new Scalar(255, 255, 255));
                 try {
@@ -240,7 +264,7 @@ public class MinerTest2 extends MouseMotionTestBase {
             }
 
             if(laser == 1 && NO_OBJECT_SELECTEDmmr.maxVal > 0.900855073928833){laser = 0;}
-            System.out.println(ASTEROID_VELDSPARmmr.maxVal + "  123");
+            System.out.println(ASTEROID_VELDSPARmmr.maxVal + "  ASTEROID_VELDSPAR");
             if (ASTEROID_VELDSPARmmr.maxVal > 0.900855073928833 && FULLmmr.maxVal < 0.950855073928833 && laser < 1) { // значение mmr.maxVal показывает уровень сходства
                 Imgproc.rectangle(MatImg, ASTEROID_VELDSPARMatchLoc, new Point(ASTEROID_VELDSPARMatchLoc.x + ASTEROID_VELDSPAR.cols(), ASTEROID_VELDSPARMatchLoc.y + ASTEROID_VELDSPAR.rows()), new Scalar(0, 0, 255));
                 try {
@@ -311,7 +335,7 @@ public class MinerTest2 extends MouseMotionTestBase {
                     ex.printStackTrace();
                 }
             }
-            System.out.println(FULL2mmr.maxVal);
+            System.out.println(FULL2mmr.maxVal + " FULL");
             if (OVERVIEW_GENERALmmr.maxVal > 0.940855073928833 && FULLmmr.maxVal > 0.950855073928833 || FULL2mmr.maxVal > 0.940855073928833) { // значение mmr.maxVal показывает уровень сходства
                 Imgproc.rectangle(MatImg, OVERVIEW_GENERALMatchLoc, new Point(OVERVIEW_GENERALMatchLoc.x + OVERVIEW_GENERAL.cols(), OVERVIEW_GENERALMatchLoc.y + OVERVIEW_GENERAL.rows()), new Scalar(255, 0, 255));
                 try {
