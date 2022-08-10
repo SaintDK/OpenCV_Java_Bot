@@ -1,7 +1,4 @@
-The bot is built with OpenCV, built to improve my (at the time of writing) weak programming skills.
-
-How to start?
-
+The bot is built with OpenCV, created for training
 
 1. to start you need to change all "enter window name" to the name of your window
 2. take control of a ship called Ventura
