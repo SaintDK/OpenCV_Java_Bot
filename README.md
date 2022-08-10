@@ -1,5 +1,7 @@
 The bot is built with OpenCV, created for training
 
+Adapted and calibrated for ore mining in "EVE online"
+
 1. to start you need to change all "enter window name" to the name of your window
 2. take control of a ship called Ventura
 3. reduce the window to the smallest possible
