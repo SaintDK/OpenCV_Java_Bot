@@ -28,7 +28,7 @@ public class MinerVision extends MouseMotionTestBase {
     public static void main(String[] args) throws AWTException, IOException{
         Rectangle rect = null;
 
-        int hWnd = User32.instance.FindWindowA(null, "enter window name");
+        int hWnd = User32.instance.FindWindowA(null, "EVE");
 
         JFrame window = new JFrame("Window:");
         JLabel screen = new JLabel();
