@@ -2,7 +2,7 @@ The bot is built with OpenCV, created for training
 
 Adapted and calibrated for ore mining in "EVE online"
 
-1. to start you need to change all "enter window name" to the name of your window
+1. to start you need to change "enter window name" to the name of your window
 2. open inventory
 3. open Mining hold
 4. take control of a ship called Ventura
