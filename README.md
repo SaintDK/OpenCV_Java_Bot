@@ -1,3 +1,4 @@
+
 The bot is built with OpenCV, designed to touch the basics of programming (code state matches)
 
 For the most part, this is a game with different libraries at the stage of trying to write something real, the task is taken intentionally unnecessarily difficult for a beginner
@@ -12,3 +13,4 @@ Adapted and calibrated for ore mining in "EVE online"
 6. place mining guns on F1 and F2
 7. while in the dock, run MinerTest2.java
 
+updated (the code is not recommended for reading)
